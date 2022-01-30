@@ -15,3 +15,109 @@
 @import '_libs';
 @import '_global';
 @import '_media';
+
+.header{
+  padding: 50px 0 40px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__menu-list{
+    display: flex;
+    align-items: center;
+  }
+  &__menu-item + .header__menu-item{
+    margin-left: 40px;
+  }
+  &__menu-link{
+    line-height: 24px;
+    color: $title;
+  }
+  &__logo{
+    width: 56px;
+    height: 56px;
+    margin-right: 50px;
+  }
+  &__user-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__search,
+  &__buy{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #F3FBF8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__search{
+    margin-right: 20px;
+  }
+  &__buy{
+    margin-right: 32px;
+  }
+  &__registration{
+    padding: 13px 24px;
+    background-color: #09A66D;
+    color: #FFFFFF;
+    line-height: 20px;
+    border-radius: 8px;
+  }
+}
+
+.footer{
+  padding: 65px 0 125px;
+  background-color: #FCFEFD;
+  &__items{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item-info{
+    width: 500px;
+  }
+  &__text{
+    width: 350px;
+    line-height: 30px;
+    color: $accent;
+    margin-top: 30px;
+  }
+  &__subtitle{
+    @extend %dmsans-500;
+    font-size: 24px;
+    line-height: 31px;
+    color: $title;
+    margin: 40px 0;
+  }
+  &__list-link{
+    text-decoration: none;
+    line-height: 23px;
+    color: $accent;
+  }
+  &__list-item + .footer__list-item{
+    margin-top: 24px;
+  }
+  &__item-nav{
+    width: 250px;
+  }
+  &__email{
+    text-decoration: none;
+    line-height: 23px;
+    color: $title;
+  }
+  &__social{
+    display: flex;
+    margin-top: 25px;
+  }
+  &__social-link + .footer__social-link{
+    margin-left: 50px;
+  }
+  &__item-contacts{
+    width: 225px;
+  }
+}
