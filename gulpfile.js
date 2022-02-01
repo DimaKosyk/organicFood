@@ -136,7 +136,7 @@ function images() {
         optimizationLevel: 3,
         svgoPlugins: [
           {
-            removeViewBox: false
+            removeViewBox: true
           }
         ]
       })

@@ -19,3 +19,10 @@ body{
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.title{
+  @extend %rosario-700;
+  color: $title;
+  font-size: 70px;
+  line-height: 90px;
+}
