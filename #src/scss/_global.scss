@@ -15,7 +15,7 @@ body{
 }
 
 .container{
-  max-width: 1210px;
+  max-width: 1270px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -25,4 +25,22 @@ body{
   color: $title;
   font-size: 70px;
   line-height: 90px;
+}
+
+.order-link{
+  display: flex;
+  align-items: center;
+  color: $title;
+  @extend %dmsans-500;
+  line-height: 30px;
+}
+.order-arrow{
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-left: 20px;
+  background-color: #09A66D;
 }

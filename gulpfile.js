@@ -32,24 +32,24 @@ let path = {
 let { src, dest } = require('gulp'),
   gulp = require('gulp'),
   browsersync = require('browser-sync').create();
-fileinclude = require('gulp-file-include');
-del = require('del');
-scss = require('gulp-sass')(require('sass'));
-autoprefixer = require('gulp-autoprefixer');
-groupMedia = require('gulp-group-css-media-queries');
-cleanCss = require('gulp-clean-css');
-rename = require('gulp-rename');
-uglify = require('gulp-uglify');
-concat = require('gulp-concat');
-jQuery = require('jquery');
-imagemin = require('gulp-imagemin');
-webp = require('gulp-webp');
-webphtml = require('gulp-webp-html');
-webpcss = require('gulp-webpcss');
-svgsprite = require('gulp-svg-sprite');
-ttf2woff = require('gulp-ttf2woff');
-ttf2woff2 = require('gulp-ttf2woff2');
-fonter = require('gulp-fonter');
+  fileinclude = require('gulp-file-include');
+  del = require('del');
+  scss = require('gulp-sass')(require('sass'));
+  autoprefixer = require('gulp-autoprefixer');
+  groupMedia = require('gulp-group-css-media-queries');
+  cleanCss = require('gulp-clean-css');
+  rename = require('gulp-rename');
+  uglify = require('gulp-uglify');
+  concat = require('gulp-concat');
+  jQuery = require('jquery');
+  imagemin = require('gulp-imagemin');
+  webp = require('gulp-webp');
+  webphtml = require('gulp-webp-html');
+  webpcss = require('gulp-webpcss');
+  svgsprite = require('gulp-svg-sprite');
+  ttf2woff = require('gulp-ttf2woff');
+  ttf2woff2 = require('gulp-ttf2woff2');
+  fonter = require('gulp-fonter');
 
 
 function browserSync() {
@@ -57,7 +57,7 @@ function browserSync() {
     server: {
       baseDir: "./" + project_folder + "/"
     },
-    port: 3000,
+    port: 3002,
     notify: false
   })
 }

@@ -126,12 +126,11 @@
   background-color: #F3FBF8;
   padding: 92px 0 50px;
   position: relative;
-  z-index: 1;
-  &__decor::before{
+  &__decor::after{
     content: "";
     position: absolute;
   }
-  &__decor::before{
+  &__decor::after{
     top: -38px;
     left: -10px;
     background-image: url(../img/about/decor.svg);
@@ -152,22 +151,7 @@
     margin-bottom: 40px;
   }
   &__order-link{
-    display: flex;
     justify-content: center;
-    align-items: center;
-    color: $title;
-    @extend %dmsans-500;
-    line-height: 30px;
-  }
-  &__order-arrow{
-    width: 64px;
-    height: 64px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    margin-left: 20px;
-    background-color: #09A66D;
   }
   &__box{
     display: flex;
@@ -212,6 +196,20 @@
 
 .service{
   padding: 140px 0 145px;
+  position: relative;
+  &__inner::after{
+    content: "";
+    position: absolute;
+  }
+  &__inner::after{
+    top: -38px;
+    right: 235px;
+    z-index: -1;
+    background-image: url(../img/service/service-decor.svg);
+    background-repeat: no-repeat;
+    width: 944px;
+    height: 532px;
+  }
   &__title{
     margin-bottom: 20px;
   }
@@ -278,5 +276,46 @@
   &__item-subtitle{
     font-size: 14px;
     line-height: 20px;
+  }
+  &__img{
+    border-radius: 50%;
+  }
+}
+
+.explore{
+  padding: 89px 0 143px;
+  background-color: #F2FAF7;
+  position: relative;
+  &__inner::after{
+    content: "";
+    position: absolute;
+  }
+  &__inner::after{
+    bottom: 0px;
+    right: 50px;
+    background-image: url(../img/about/decor.svg);
+    background-repeat: no-repeat;
+    width: 414px;
+    height: 397px;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__img{
+    width: 600px;
+    height: 600px;
+  }
+  &__content{
+    width: 575px;
+    margin: 30px 0 0 50px;
+  }
+  &__title{
+    margin-bottom: 20px;
+  }
+  &__subtitle{
+    line-height: 30px;
+    color: $accent;
+    margin-bottom: 50px;
   }
 }
