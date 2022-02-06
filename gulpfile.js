@@ -57,7 +57,7 @@ function browserSync() {
     server: {
       baseDir: "./" + project_folder + "/"
     },
-    port: 3002,
+    port: 3000,
     notify: false
   })
 }
@@ -102,10 +102,9 @@ function js() {
 
     './node_modules/jquery/dist/jquery.js',
     // './node_modules/mixitup/dist/mixitup.js',
-    // './node_modules/rateyo/src/jquery.rateyo.js',
-    //'./node_modules/slick-carousel/slick/slick.js',
-
-
+    './node_modules/slick-carousel/slick/slick.js',
+    './node_modules/rateyo/src/jquery.rateyo.js',
+    
     path.src.js,
   ])
     .pipe(concat('script.js'))
