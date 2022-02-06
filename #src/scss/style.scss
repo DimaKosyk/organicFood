@@ -319,3 +319,101 @@
     margin-bottom: 50px;
   }
 }
+
+.comments{
+  padding: 96px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    width: 640px;
+  }
+  &__title{
+    margin-bottom: 20px;
+  }
+  &__subtitle{
+    line-height: 30px;
+    color: $accent;
+    margin-bottom: 40px;
+  }
+  &__item-name{
+    font-size: 30px;
+    line-height: 36px;
+    @extend %dmsans-500;
+    margin-bottom: 20px;
+  }
+  &__item-content{
+    width: 320px;
+  }
+  .slider-btn__prev,
+  .slider-btn__next{
+    position: absolute;
+    top: 250px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .slider-btn__prev{
+    left: 325px;
+  }
+  .slider-btn__next{
+    left: 410px;
+  }
+  .slider-btn__prev:hover,
+  .slider-btn__next:hover{
+    border: none;
+    background-color: #09A66D;
+    path{
+      fill: #FFFFFF;
+    }
+  }
+}
+
+.application{
+  padding: 54px 0 136px;
+  &__inner{
+    display: flex;
+    justify-content: center;
+  }
+  &__img{
+    width: 265px;
+    margin-right: 112px;
+  }
+  &__content{
+    width: 663px;
+    margin-top: 35px;
+  }
+  &__download{
+    width: 170px;
+    height: 40px;
+    background-color: #F3FBF8;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  &__download-link{
+    color: #333333;
+  }
+  &__subtitle{
+    line-height: 30px;
+    color: $accent;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  &__device{
+    display: flex;
+  }
+  &__apple{
+    margin-right: 24px;
+  }
+}
