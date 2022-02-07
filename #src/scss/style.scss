@@ -22,6 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
   &__menu-list{
     display: flex;
@@ -33,6 +34,9 @@
   &__menu-link{
     line-height: 24px;
     color: $title;
+  }
+  &__menu-btn{
+    display: none;
   }
   &__logo{
     width: 56px;
@@ -415,5 +419,107 @@
   }
   &__apple{
     margin-right: 24px;
+  }
+}
+
+@media(max-width: 900px){
+  .header{
+    padding: 30px 0 25px;
+    &__menu-item + .header__menu-item{
+      margin-left: 20px;
+    }
+  }
+}
+
+@media(max-width: 800px){
+  .header{
+    &__logo{
+      margin: 0;
+    }
+    &__menu{
+      order: 1;
+      margin-left: 30px;
+    }
+    &__menu-list{
+      transform: translateY(-200%);
+      position: absolute;
+      top: 100px;
+      width: 100%;
+      left: 0;
+      flex-direction: column;
+      align-items: center;
+      z-index: 5;
+      transition: all .3s;
+      background-color: #F3FBF8;
+      &.header__menu-list--active{
+        transform: translateY(0%);
+        transition: all .3s;
+      }
+    }
+    &__menu-item + .header__menu-item{
+      margin-left: 0px;
+      border-top: 1px solid #fff;
+    }
+    &__menu-item{
+      width: 100%;
+      text-align: center;
+    }
+    &__menu-link{
+      padding: 12px 0;
+      display: block;
+    }
+    &__menu-btn{
+      width: 30px;
+      height: 21px;
+      border: none;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 0;
+      cursor: pointer;
+      span{
+        width: 100%;
+        height: 3px;
+        background-color: #7b7b7b;
+      }
+      &::after,
+      &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #7b7b7b;
+      }
+      &::before{
+        top: 0;
+      }
+      &::after{
+        bottom: 0;
+      }
+    }
+    &__user-nav{
+      margin-left: auto;
+    }
+  }
+}
+
+@media(max-width: 600px){
+  .header{
+    &__logo{
+      order: -1;
+    }
+    &__menu{
+      order: 0;
+    }
+    &__menu-list{
+      top: 150px;
+    }
+    &__user-nav{
+      width: 100%;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
   }
 }
