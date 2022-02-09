@@ -237,7 +237,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    max-width: 500px;
     height: 160px;
     cursor: pointer;
   }
@@ -305,10 +305,6 @@
   &__inner{
     display: flex;
     justify-content: space-between;
-  }
-  &__img{
-    width: 600px;
-    height: 600px;
   }
   &__content{
     width: 575px;
@@ -379,6 +375,9 @@
       fill: #FFFFFF;
     }
   }
+  &__img{
+    margin-top: 30px;
+  }
 }
 
 .application{
@@ -428,6 +427,18 @@
       display: none;
     }
   }
+
+  .service{
+    &__inner::after{
+      right: 50px;
+    }
+  }
+
+  .explore{
+    &__inner::after{
+      display: none;
+    }
+  }
 }
 
 @media(max-width: 1100px){
@@ -445,6 +456,31 @@
     &__item-contacts{
       display: block;
       width: 100%;
+    }
+  }
+
+  .comments{
+    padding: 30px 0 40px;
+    &__subtitle{
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+    &__img{
+      display: none;
+    }
+    &__content {
+      width: 100%;
+    }
+  }
+
+  .application {
+    padding: 50px 0 70px;
+    &__content {
+     margin-top: 0px;
+    }
+    &__subtitle {
+      margin-top: 10px;
+      margin-bottom: 20px;
     }
   }
 }
@@ -485,6 +521,32 @@
   .title {
     font-size: 60px;
     line-height: 70px;
+  }
+
+  .service{
+    padding: 30px 0;
+    &__subtitle{
+      width: 100%;
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+    &__inner::after{
+      display: none;
+    }
+    &__item-imgbox {
+      margin-left: 0px;
+    }
+  }
+
+  .explore{
+    padding: 30px 0;
+    &__subtitle {
+      margin-bottom: 10px;
+      line-height: 25px;
+    }
+    &__content {
+      margin: 0px 0 0 30px;
+    }
   }
 }
 
@@ -581,6 +643,58 @@
       margin-top: 20px;
     }
   }
+
+  .service{
+    &__img{
+      display: none;
+    }
+    &__content{
+      justify-content: center;
+    }
+    &__item{
+      height: 120px;
+      padding-left: 5px;
+    }
+    &__item-box {
+      width: 210px;
+      margin-left: 12px;
+    }
+    &__item-imgbox {
+      width: 70px;
+      height: 70px;
+    }
+    &__item-title {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  .explore{
+    &__img{
+      display: none;
+    }
+    &__inner{
+      justify-content: start;
+    }
+    &__content{
+      width: 100%;
+      margin: 0px;
+    }
+  }
+
+  .application{
+    padding: 10px 0 20px;
+    &__subtitle{
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+    &__inner {
+      justify-content: start;
+    }
+    &__img{
+      display: none;
+    }
+  }
 }
 
 @media(max-width: 600px){
@@ -598,6 +712,10 @@
       width: 100%;
       justify-content: flex-end;
       margin-top: 10px;
+    }
+    &__search,
+    &__buy{
+      margin-right: 15px;
     }
   }
 
