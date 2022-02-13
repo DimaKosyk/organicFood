@@ -17,12 +17,18 @@
 @import '_media';
 
 .header{
-  padding: 50px 0 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #fff;
   &__inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding: 50px 0 40px;
   }
   &__menu-list{
     display: flex;
@@ -65,6 +71,17 @@
   }
   &__buy{
     margin-right: 32px;
+    position: relative;
+  }
+  &__buy::before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #09A66D;
+    border-radius: 50%;
+    top: 7px;
+    left: 21px;
   }
   &__registration{
     padding: 13px 24px;
@@ -128,8 +145,9 @@
 
 .about{
   background-color: #F3FBF8;
-  padding: 92px 0 50px;
+  padding: 140px 0 50px;
   position: relative;
+  margin-top: 146px;
   &__decor::after{
     content: "";
     position: absolute;
@@ -287,7 +305,7 @@
 }
 
 .explore{
-  padding: 89px 0 143px;
+  padding: 140px 0 143px;
   background-color: #F2FAF7;
   position: relative;
   &__inner::after{
@@ -487,14 +505,17 @@
 
 @media(max-width: 900px){
   .header{
-    padding: 30px 0 25px;
+    &__inner{
+      padding: 5px 0 5px;
+    }
     &__menu-item + .header__menu-item{
       margin-left: 20px;
     }
   }
 
   .about{
-    padding: 30px 0;
+    padding: 66px 0 30px;
+    margin-top: 66px;
     &__subtitle {
       line-height: 25px;
       margin-bottom: 20px;
@@ -524,7 +545,7 @@
   }
 
   .service{
-    padding: 30px 0;
+    padding: 66px 0 30px;
     &__subtitle{
       width: 100%;
       line-height: 25px;
@@ -539,7 +560,7 @@
   }
 
   .explore{
-    padding: 30px 0;
+    padding: 66px 0 30px;
     &__subtitle {
       margin-bottom: 10px;
       line-height: 25px;
@@ -706,7 +727,7 @@
       order: 0;
     }
     &__menu-list{
-      top: 150px;
+      top: 120px;
     }
     &__user-nav{
       width: 100%;
